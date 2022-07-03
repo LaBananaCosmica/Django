@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Registro</h1>
+
+    <form action="" method="get">
+
+        <label for="marcas">Ingrese la marca: </label>
+        <input type="text" name = "marcas">
+
+        <br>
+
+        <label for="colores">Ingrese el color: </label>
+        <input type="text" name = "colores">
+
+        <label for="cantidad">Ingrese la cantidad de pasajeros: </label>
+        <input type="number" name = "cantidad">
+
+        <label for="fecha">Ingrese la fecha de salida: </label>
+        <input type="date" name = "fecha">
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <hr>
+
+    <h1>Listado de carros: </h1>
+
+    {% for carro in vehiculos %}
+
+    <ul>
+        <li>Marca: {{carro.marca}}</li>
+        <li>Color: {{carro.color}}</li>
+        <li>Cantidad maxima de pasajeros: {{carro.cantidad_pasajeros}}</li>
+        <li>Fecha de salida: {{carro.fecha_salida}}</li>
+    </ul>
+    
+
+    {% endfor %}
+
+</body>
+
+</html>
