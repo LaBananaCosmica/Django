@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block cuerpo %}
+
+<p>Marca: {{detalles.marca}}</p>
+<p>Color: {{detalles.color}}</p>
+<p>Cantidad maxima de pasajeros: {{detalles.cantidad_pasajeros}}</p>
+<p>Fecha de salida: {{detalles.fecha_salida}}</p>
+
+{% endblock %}

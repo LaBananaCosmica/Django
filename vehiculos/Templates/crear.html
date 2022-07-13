@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +11,7 @@
     <title>Document</title>
 </head>
 
-<body>
+{% block cuerpo %}
 
     <h1>Registro</h1>
 
@@ -16,8 +19,6 @@
 
         <label for="marcas">Ingrese la marca: </label>
         <input type="text" name = "marcas">
-
-        <br>
 
         <label for="colores">Ingrese el color: </label>
         <input type="text" name = "colores">
@@ -34,20 +35,8 @@
 
     <hr>
 
-    <h1>Listado de carros: </h1>
 
-    {% for carro in vehiculos %}
+{% endblock %}
 
-    <ul>
-        <li>Marca: {{carro.marca}}</li>
-        <li>Color: {{carro.color}}</li>
-        <li>Cantidad maxima de pasajeros: {{carro.cantidad_pasajeros}}</li>
-        <li>Fecha de salida: {{carro.fecha_salida}}</li>
-    </ul>
-    
-
-    {% endfor %}
-
-</body>
 
 </html>
