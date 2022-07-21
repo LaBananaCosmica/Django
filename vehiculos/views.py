@@ -142,10 +142,6 @@ def buscar(request):
         elif request.GET["palanca"] == "moto":
             contexto = { "buscados" : buscadorM , "todos" : var2 }
 
-        plantilla = loader.get_template("buscador.html")
-        documento = plantilla.render( contexto )
-        
-        return HttpResponse( documento )
     
     plantilla = loader.get_template("buscador.html")
     documento = plantilla.render( contexto )
